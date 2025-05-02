@@ -1,5 +1,5 @@
 import re
-from datetime import *
+
 
 class Car:
     def __init__(self, car_number, time):
@@ -31,14 +31,3 @@ class TruckCar(Car):
         super().__init__(car_number, time)
         self.car_type = 'truck'
 
-
-if __name__ == "__main__":
-    cars = []
-
-    cars.append(PassengerCar("А123ОВ777", datetime(2023, 5, 10, 8, 15)))
-    cars.append(TruckCar("У456ХХ78", datetime(2023, 5, 10, 9, 30)))
-    cars.append(TruckCar("Е789МН123", datetime(2023, 5, 11, 12, 45)))
-
-    print("Все записи в реестре:")
-    for car in cars:
-        print(car.print())
